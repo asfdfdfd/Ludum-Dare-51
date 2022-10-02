@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - SystemComponents
+  - AdviceText
   layers:
   - Default
   - TransparentFX

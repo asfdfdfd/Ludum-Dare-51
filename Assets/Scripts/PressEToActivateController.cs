@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -18,7 +15,7 @@ public class PressEToActivateController : MonoBehaviour
         
         _interactableSystem._onActiveInteractableChanged.AddListener((interactable) =>
         {
-            if (interactable != null)
+            if (interactable != null && interactable.IsInteractionEnabled())
             {
                 _text.enabled = true;
             }

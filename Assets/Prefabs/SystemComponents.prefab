@@ -71,3 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff422c535f5484a50acbfc83b2b182b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onActiveInteractableChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  maxRaycastDistance: 2
