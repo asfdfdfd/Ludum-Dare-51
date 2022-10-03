@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using DG.Tweening;
 using UnityEngine;
 
 public class TeleportationSystem : MonoBehaviour
@@ -18,9 +19,17 @@ public class TeleportationSystem : MonoBehaviour
     private CharacterController _characterController;
 
     private bool _isTimerStopped = false;
+
+    private SoundPlayerController _soundPlayerController;
+
+    private Camera _camera;
     
     private void Start()
     {
+        _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        
+        _soundPlayerController = GameObject.FindWithTag("SoundPlayer").GetComponent<SoundPlayerController>();
+        
         _playerCapsule = GameObject.FindWithTag("Player");
         _characterController = _playerCapsule.GetComponent<CharacterController>();
         
@@ -43,8 +52,6 @@ public class TeleportationSystem : MonoBehaviour
 
             if (_tenSecondsTimer <= 0)
             {
-                _tenSecondsTimer += TEN_SECONDS_TIME;
-
                 MovePlayerToActiveTeleport();
             }
         }
@@ -73,6 +80,11 @@ public class TeleportationSystem : MonoBehaviour
             _playerCapsule.transform.position = _activeTeleport.transform.position;
             _playerCapsule.transform.rotation = _activeTeleport.transform.rotation;
             _characterController.enabled = true;
+        
+            _soundPlayerController.PlayBackgroundMusic();
+            _soundPlayerController.PlayTeleportIn();
+        
+            ResetTimer();
         }
     }
 }

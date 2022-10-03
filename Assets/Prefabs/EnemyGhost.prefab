@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6726551136639138882}
   - component: {fileID: 6726551136639138886}
   - component: {fileID: 3333761959464345811}
+  - component: {fileID: 6766333759354250673}
   m_Layer: 0
   m_Name: EnemyGhost
   m_TagString: Untagged
@@ -71,6 +72,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6766333759354250673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726551136639138887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a465b34cd09643cfa97a58e03a19eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _navMeshAgent: {fileID: 6726551136639138886}
+  enoughDistance: 0.5
+  points: []
 --- !u!1001 &2310281405938019525
 PrefabInstance:
   m_ObjectHideFlags: 0

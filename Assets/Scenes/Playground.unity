@@ -1024,36 +1024,6 @@ Transform:
   m_Father: {fileID: 1806366418}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1570102410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6726551136639138887, guid: a2573e77ed2064715ae1e69d76eb1434,
-    type: 3}
-  m_PrefabInstance: {fileID: 6726551137521361101}
-  m_PrefabAsset: {fileID: 0}
---- !u!195 &1570102411 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: 6726551136639138886, guid: a2573e77ed2064715ae1e69d76eb1434,
-    type: 3}
-  m_PrefabInstance: {fileID: 6726551137521361101}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1570102416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570102410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a465b34cd09643cfa97a58e03a19eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _navMeshAgent: {fileID: 1570102411}
-  enoughDistance: 0.5
-  points:
-  - {fileID: 1454142258}
-  - {fileID: 595222096}
-  - {fileID: 1039174136}
 --- !u!1 &1764214107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,6 +2336,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyGhost
       objectReference: {fileID: 0}
+    - target: {fileID: 6766333759354250673, guid: a2573e77ed2064715ae1e69d76eb1434,
+        type: 3}
+      propertyPath: points.Array.data[0]
+      value: 
+      objectReference: {fileID: 1454142258}
+    - target: {fileID: 6766333759354250673, guid: a2573e77ed2064715ae1e69d76eb1434,
+        type: 3}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 595222096}
+    - target: {fileID: 6766333759354250673, guid: a2573e77ed2064715ae1e69d76eb1434,
+        type: 3}
+      propertyPath: points.Array.data[2]
+      value: 
+      objectReference: {fileID: 1039174136}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2573e77ed2064715ae1e69d76eb1434, type: 3}
 --- !u!1001 &7288094137546172433

@@ -7,31 +7,18 @@ using UnityEngine.Events;
 public class MultipleUseButtonController : MonoBehaviour
 {
     [SerializeField] private UnityEvent _onButtonPressed;
-
-    [SerializeField] private MultipleUseButtonAnimationController _animatorController;
-
-    private bool _isAnimationStarted = false;
+    
+    private SoundPlayerController _soundPlayerController;
     
     private void Start()
     {
-        _animatorController.onButtonPressed.AddListener(() =>
-        {
-            _onButtonPressed?.Invoke();
-        });
-
-        _animatorController.onButtonReleased.AddListener(() =>
-        {
-            _isAnimationStarted = false;
-        });
+        _soundPlayerController = GameObject.FindWithTag("SoundPlayer").GetComponent<SoundPlayerController>();
     }
-
+    
     public void Interact()
     {
-        if (!_isAnimationStarted)
-        {
-            _isAnimationStarted = true;
-
-            _animatorController.Press();
-        }
+        _soundPlayerController.PlayAssButton();
+        
+        _onButtonPressed?.Invoke();
     }
 }

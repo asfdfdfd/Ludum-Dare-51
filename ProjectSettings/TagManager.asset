@@ -7,6 +7,7 @@ TagManager:
   - CinemachineTarget
   - SystemComponents
   - AdviceText
+  - SoundPlayer
   layers:
   - Default
   - TransparentFX
